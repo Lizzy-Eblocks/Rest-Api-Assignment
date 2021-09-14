@@ -32,7 +32,7 @@ namespace af.assessment.api.test.Controllers
             {
                 new Appointment
                 {
-                    Id = Guid.Parse("23ce3616-efa0-4c1f-8254-6e3abde372b"),
+                    Id = Guid.Parse("23ce3616-efa0-4c1f-8254-6e3abde372bd"),
                     AvailableDate = DateTime.Today,
                     DateSelected = DateTime.Now,
                     MemberId = Guid.Parse("48ed15b1-af8a-4505-b795-12707bb5539f"),
