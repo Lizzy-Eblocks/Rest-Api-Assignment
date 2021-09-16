@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using af.assessment.api.Data.Models;
 
 namespace af.assessment.api.Stores
 {
-    interface Interface
+    public interface IRegisterStore
     {
+        Task AddNewMember(Member member);
     }
 }

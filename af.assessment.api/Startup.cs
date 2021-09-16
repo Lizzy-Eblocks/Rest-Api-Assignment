@@ -40,11 +40,16 @@ namespace af.assessment.api
 
             services.AddTransient<IVaccineStore, VaccineStore>();
             services.AddTransient<IVaccineService, VaccineService>();
+            services.AddTransient<IRegisterService, RegisterService>();
+            services.AddTransient<IRegisterStore, RegisterStore>();
+
 
             // Connection String to Postgres Database : 
             var connectionString = Configuration["ConnectionStrings:Postgres"];
             services.AddDbContext<VaccineDbContext>(options =>
                 options.UseNpgsql(connectionString));
+            services.AddDbContext<RegisterDbContext>(options =>
+               options.UseNpgsql(connectionString));
 
             services.AddSwaggerGen(s =>
             {

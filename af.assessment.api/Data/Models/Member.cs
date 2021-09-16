@@ -39,7 +39,7 @@ namespace af.assessment.api.Data.Models
         /// 
         /// </summary>
         [DataMember(Name = "mobileNumber")]
-        public int MobileNumber { get; set; }
+        public long MobileNumber { get; set; }
         
         /// <summary>
         /// 
