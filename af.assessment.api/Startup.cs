@@ -42,6 +42,7 @@ namespace af.assessment.api
             services.AddTransient<IVaccineService, VaccineService>();
             services.AddTransient<IRegisterService, RegisterService>();
             services.AddTransient<IRegisterStore, RegisterStore>();
+         
 
 
             // Connection String to Postgres Database : 

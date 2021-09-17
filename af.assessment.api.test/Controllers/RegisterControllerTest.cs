@@ -29,5 +29,16 @@ namespace af.assessment.api.test.Controllers
 
         }
 
+        [Fact]
+        public void New_User_Enters_Null_Info()
+        {
+            //Arrange
+           
+            //Act
+
+            //Assert
+
+        }
+
     }
 }

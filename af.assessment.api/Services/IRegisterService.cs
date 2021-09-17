@@ -10,5 +10,6 @@ namespace af.assessment.api.Services
     {
         public Task AddNewMember(Member member);
         public Task GetUser(string id);
+        Task<Member> LoginSuccessfully(LoginDetails loginDetails);
     }
 }

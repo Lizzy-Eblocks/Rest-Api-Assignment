@@ -1,4 +1,4 @@
-/*
+﻿/*
  * [2019] - [2021] Eblocks Software (Pty) Ltd, All Rights Reserved.
  * NOTICE: All information contained herein is, and remains the property of Eblocks
  * Software (Pty) Ltd.
@@ -16,22 +16,16 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
 using System.Runtime.Serialization;
+using System.Threading.Tasks;
 
 namespace af.assessment.api.Data.Models
 {
-    public class Member
+    public class LoginDetails
     {
-        /// <summary>
-        /// 
-        /// </summary>
         [Required]
-        [DataMember(Name = "id")]
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public Guid Id { get; set; }
-        
+
         /// <summary>
         /// 
         /// </summary>
@@ -49,28 +43,11 @@ namespace af.assessment.api.Data.Models
         /// 
         /// </summary>
         [Required]
-        
-        [DataMember(Name = "identificationNumber")]
-        public long IdentificationNumber { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [Required]
-        [DataMember(Name = "mobileNumber")]
-        public long MobileNumber { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [Required]
         [DataMember(Name = "password")]
         public string Password { get; set; }
-        
-        /// <summary>
-        /// 
-        /// </summary>
-        [DataMember(Name = "familyMember")]
-        public List<FamilyMember> FamilyMember { get; set; }
+
+       
+
+
     }
 }

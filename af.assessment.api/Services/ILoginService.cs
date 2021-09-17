@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace af.assessment.api.Services
 {
-    interface ILoginService
+    public interface ILoginService
     {
     }
 }
