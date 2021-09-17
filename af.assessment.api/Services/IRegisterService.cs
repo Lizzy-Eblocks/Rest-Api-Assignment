@@ -8,6 +8,7 @@ namespace af.assessment.api.Services
 {
     public interface IRegisterService
     {
-        Task AddNewMember(Member member);
+        public Task AddNewMember(Member member);
+        public Task GetUser(string id);
     }
 }

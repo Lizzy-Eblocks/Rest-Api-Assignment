@@ -26,7 +26,14 @@ namespace af.assessment.api.Stores
         public async Task AddNewMember(Member member)
         {
             await _dbContext.Members.AddAsync(member);
-                  _dbContext.SaveChanges();
+            _dbContext.SaveChanges();
+        }
+        public async Task GetUser(string id)
+        {
+               await _dbContext.Members
+               .Where(a => id == a.Name)
+               .ToListAsync();
+
         }
     }
 }

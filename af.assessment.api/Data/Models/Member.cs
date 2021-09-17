@@ -22,28 +22,32 @@ namespace af.assessment.api.Data.Models
         /// </summary>
         [DataMember(Name = "memberName")]
         public string Name { get; set; }
-        
+
         /// <summary>
         /// 
         /// </summary>
+        [Required]
         [DataMember(Name = "email")]
         public string Email { get; set; }
-        
+
         /// <summary>
         /// 
         /// </summary>
+        [Required]
         [DataMember(Name = "identificationNumber")]
         public long IdentificationNumber { get; set; }
-        
+
         /// <summary>
         /// 
         /// </summary>
+        [Required]
         [DataMember(Name = "mobileNumber")]
         public long MobileNumber { get; set; }
-        
+
         /// <summary>
         /// 
         /// </summary>
+        [Required]
         [DataMember(Name = "password")]
         public string Password { get; set; }
         

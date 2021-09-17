@@ -4,11 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using af.assessment.api.Data.Models;
 using af.assessment.api.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
 namespace af.assessment.api.Controllers
 {
+    //[Authorize]
     [ApiController]
     [Route("/v2/")]
     public class RegisterController
@@ -28,7 +30,7 @@ namespace af.assessment.api.Controllers
         [SwaggerResponse(200, type: typeof(Member), description: "Single user successfully registered")]
         public async Task AddNewMember(Member member)
         {
-            if(member == null)
+            if (member == null)
             {
                 throw new ArgumentNullException("cannot be null");
             }
@@ -45,5 +47,19 @@ namespace af.assessment.api.Controllers
             };
             await _registerService.AddNewMember(user);
         }
+
+       /* [HttpGet("user id {id}")]
+        [Produces("application/json")]
+        [SwaggerOperation("get-existing-member")]
+        [SwaggerResponse(200, type: typeof(Member), description: "Single user is registered")]
+        public async Task GetUser(string id)
+        {
+            if (id == null)
+            {
+                throw new ArgumentNullException(" Null exception");
+            }
+
+            await _registerService.GetUser(id);
+        }*/
     }
 }

@@ -19,5 +19,9 @@ namespace af.assessment.api.Services
         {
            await _registerStore.AddNewMember(member);
         }
+        public async Task GetUser(string id)
+        {
+            await _registerStore.GetUser(id);
+        }
     }
 }
